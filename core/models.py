@@ -85,7 +85,7 @@ class Service(models.Model):
 
     class Meta:
         verbose_name = ['Service']
-        verbose_name_plural = ['Services']
+        verbose_name_plural = ("Serices")
         ordering = ["name", "uuid"]
 
 
