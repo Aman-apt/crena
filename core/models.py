@@ -56,6 +56,7 @@ class Service(models.Model):
     ARCHIVED = "AR"
     SERVICE_STATUSES = [(ACTIVE, _("Active")), (ARCHIVED, _("Archived"))]
 
+    #core attributes of the services
     uuid = models.UUIDField(_("uuid"), default=_default_uuid)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, verbose_name=_("user"), on_delete=models.CASCADE)
     name = models.CharField(_("name"), max_length=254)
