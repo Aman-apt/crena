@@ -1,5 +1,1 @@
-I am creating this project to learn more and challenge myself. I will work on more advance projects after this .. you can also checkout those.
-This is a Simple yet a useful Web-Analytic tool written using python and Django .
-
-
-The Project is still in progress(this is fancy of saying that i started this project 3 hours before)
+I started this project with Python and Django to challenge myself and dive deeper into Backend Development. While it's not finished yet, like most of the projects but i will complete this project in less than 4 days. It's a fun work-in-progress, and I'm excited to apply these new skills to future projects
