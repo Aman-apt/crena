@@ -125,7 +125,7 @@ class Service(models.Model):
         main_data["compare"] = comparsion_data
         return main_data
 
-
+    # this method is written to aggregate the datas of the models 
     def get_relative_stats(self, start_time, end_time):
         Session = apps.get_model('analytics', 'Session')
         Hit = apps.get_model('analytics', 'Hit')
@@ -142,7 +142,8 @@ class Service(models.Model):
 
         bounces = sessions.filter(is_bounce=True)
         bounces_count = bounces.count()
-
+        
+        #from here till the avg_hit_per_session we are annoting and slicing the database tables to query them much faster through a constant
         locations = hits.values("location").annotate(count=models.Count("location")).order_by("-count")[:RESULT_LIMITS]
         referrer_ignore = self.get_ignored_referrer_regex()
 
@@ -211,3 +212,7 @@ class Service(models.Model):
 
     def _get_chart_data(self, session, hits, start_time, end_time, tz_now):
         pass
+
+    def get_absolute_url(self):
+        return reverse("model_detail", kwargs={"pk": self.pk})
+    
