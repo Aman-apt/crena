@@ -7,8 +7,7 @@ from core.models import Service, ACTIVE_USER_TIMEDELTA
 
 
 def _default_uuid():
-    return uuid.uuid4()
-
+    return str(uuid.uuid4())
 
 class Session(models.Model):
     uuid = models.UUIDField(_("uuid"), default=_default_uuid)
