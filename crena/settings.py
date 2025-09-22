@@ -26,7 +26,6 @@ AUTH_USER_MODEL = 'core.User'
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -36,23 +35,26 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
 
-    # Local apps
+    # health check apps
+    'health_check',
+    'health_check.db',
+    'health_check.cache',
+
+    # local apps
     'analytics',
     'api',
     'core',
     'dashboard',
 
-    #Installed packages
+    # third-party apps
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'rest_framework',
     'corsheaders',
-    'health_check.db',
-    'health_check.cache',
-    'rules.apps.AutodiscoverRulesConfig',
+    'rules', 
     'debug_toolbar',
-    
+    'django_user_agents',
 ]
 
 SITE_ID = 1
@@ -74,6 +76,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware', # allauth configs 
     'debug_toolbar.middleware.DebugToolbarMiddleware', 
+    'django_user_agents.middleware.UserAgentMiddleware'
 ]
 
 ROOT_URLCONF = 'crena.urls'
