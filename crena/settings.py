@@ -172,6 +172,28 @@ CELERY_TIMEZONE = 'UTC'
 # Service related constants and varilables
 SCRIPT_HEARTBEAT_FREQUENCY = int("5000")
 
+#MaxMind Configs 
+MAXMIND_CITY_DB = os.path.join("..analytics/geoip2/GeoLite2-City_20250916/GeoLite2-City.mmdb")
+MAXMIND_ASN_DB = os.path.join("..analytics/geoip2/GeoLite2-City_20250916/GeoLite2-ASN.mmdb")
+MAXMIND_COUNTRY_DB = os.path.join("..analytics/geoip2/GeoLite2-City_20250916/GeoLite2-Country.mmdb")
+
+
+#To be Added in the env
+ONLY_SUPERUSERS_CREATE = True
+SCRIPT_USE_HTTPS = True
+SCRIPT_HEARTBEAT_FREQUENCY = 5000
+SESSION_MEMORY_TIMEOUT = 1800
+SHOW_SHYNET_VERSION = True
+SHOW_THIRD_PARTY_ICONS = True
+BLOCK_ALL_IPS = False
+AGGRESSIVE_HASH_SALTING = False
+LOCATION_URL = "https://www.openstreetmap.org/?mlat=$LATITUDE&mlon=$LONGITUDE"
+DASHBOARD_PAGE_SIZE = 5
+USE_RELATIVE_MAX_IN_BAR_VISUALIZATION = True
+
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_METHODS = ["GET", "OPTIONS"]
+
 
 # Logging confiugrations 
 import os
