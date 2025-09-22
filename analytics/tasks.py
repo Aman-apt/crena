@@ -7,7 +7,7 @@ import user_agents
 
 from django.conf import settings
 from django.db.models import Q
-from django.core import cache
+from django.core.cache import cache
 from django.utils import timezone
 from celery import shared_task
 
