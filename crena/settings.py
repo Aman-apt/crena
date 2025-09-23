@@ -37,9 +37,7 @@ INSTALLED_APPS = [
 
     # health check apps
     'health_check',
-    'health_check.db',
-    'health_check.cache',
-
+    
     # local apps
     'analytics',
     'api',
